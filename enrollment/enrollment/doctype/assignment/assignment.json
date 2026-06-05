@@ -1,16 +1,15 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-06-04 17:23:52.897534",
+ "creation": "2026-06-05 12:08:32.951556",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "student",
   "course",
-  "enrollment_date",
   "semester",
-  "course_fee",
-  "total_fee"
+  "priority",
+  "description"
  ],
  "fields": [
   {
@@ -26,33 +25,34 @@
    "options": "Courses"
   },
   {
-   "fieldname": "enrollment_date",
-   "fieldtype": "Date",
-   "label": "Enrollment Date"
-  },
-  {
    "fieldname": "semester",
    "fieldtype": "Int",
    "label": "Semester"
   },
   {
-   "fieldname": "total_fee",
-   "fieldtype": "Currency",
-   "label": "Total Fee"
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh"
   },
   {
-   "fieldname": "course_fee",
-   "fieldtype": "Currency",
-   "label": "Course Fee"
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2026-06-05 13:55:42.656048",
+ "links": [
+  {
+   "link_doctype": "ToDo",
+   "link_fieldname": "description"
+  }
+ ],
+ "modified": "2026-06-05 17:39:55.652405",
  "modified_by": "Administrator",
  "module": "Enrollment",
- "name": "Enrollment",
+ "name": "Assignment",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:first_name",
  "creation": "2026-06-04 17:20:23.468569",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -14,7 +15,8 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name"
+   "label": "First Name",
+   "unique": 1
   },
   {
    "fieldname": "last_name",
@@ -35,10 +37,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-04 17:21:49.399755",
+ "modified": "2026-06-05 12:31:05.229857",
  "modified_by": "Administrator",
  "module": "Enrollment",
  "name": "Student",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

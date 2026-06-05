@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:course_name",
  "creation": "2026-06-04 17:22:04.195282",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -15,7 +16,9 @@
   {
    "fieldname": "course_name",
    "fieldtype": "Data",
-   "label": "Course Name"
+   "in_list_view": 1,
+   "label": "Course Name",
+   "unique": 1
   },
   {
    "fieldname": "credits",
@@ -41,10 +44,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-04 17:23:35.749191",
+ "modified": "2026-06-05 17:07:05.142332",
  "modified_by": "Administrator",
  "module": "Enrollment",
  "name": "Courses",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -62,7 +66,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "course_name"
 }

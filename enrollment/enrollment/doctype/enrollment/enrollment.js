@@ -6,3 +6,18 @@
 
 // 	},
 // });
+frappe.ui.form.on("Enrollment", {
+
+    setup(frm) {
+
+        frm.set_query("course", function() {
+
+            return {
+                filters: {
+                    seats_available: [">", 0]
+                }
+            };
+        });
+
+    }
+});
