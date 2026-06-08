@@ -6,40 +6,39 @@ frappe.ui.form.on("Assignment", {
             return {
                 query: "enrollment.enrollment.doctype.assignment.assignment.get_courses",
                 filters: {
-                    student: frm.doc.student,
-                    semester: frm.doc.semester
+                    student: frm.doc.student
                 }
             };
         });
 
+        frm.set_query("semester", function() {
+            return {
+                query: "enrollment.enrollment.doctype.assignment.assignment.get_semesters",
+                filters: {
+                    student: frm.doc.student,
+                    course: frm.doc.course
+                }
+            };
+        });
+
+        frm.make_methods = {
+            "ToDo": () => {
+                frappe.model.open_mapped_doc({
+                    method: "enrollment.enrollment.doctype.assignment.assignment.make_todo",
+                    frm: frm
+                });
+            }
+        };
+
     },
 
-    student: set_reference,
-    course: set_reference,
-    semester: set_reference
+    student(frm) {
+        frm.set_value("course", "");
+        frm.set_value("semester", "");
+    },
 
-});
-
-function set_reference(frm) {
-
-    if (!(frm.doc.student && frm.doc.course && frm.doc.semester)) {
-        return;
+    course(frm) {
+        frm.set_value("semester", "");
     }
 
-    frappe.db.get_value(
-        "Enrollment",
-        {
-            student: frm.doc.student,
-            course: frm.doc.course,
-            semester: frm.doc.semester
-        },
-        "name"
-    ).then(r => {
-
-        if (r.message && r.message.name) {
-            frm.set_value("reference_type", "Enrollment");
-            frm.set_value("reference_name", r.message.name);
-        }
-
-    });
-}
+});

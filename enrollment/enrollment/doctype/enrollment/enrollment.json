@@ -16,8 +16,10 @@
   {
    "fieldname": "student",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Student",
-   "options": "Student"
+   "options": "Student",
+   "reqd": 1
   },
   {
    "fieldname": "course",
@@ -49,7 +51,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-05 13:55:42.656048",
+ "modified": "2026-06-06 11:14:56.717781",
  "modified_by": "Administrator",
  "module": "Enrollment",
  "name": "Enrollment",
