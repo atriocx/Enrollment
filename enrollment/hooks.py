@@ -5,6 +5,19 @@ app_description = "Assignment"
 app_email = "manas.git@idesignmylife.net"
 app_license = "mit"
 
+scheduler_events = {
+    "daily": [
+        "enrollment.enrollment.doctype.student_attendance.student_attendance.update_attendance_count"
+    ]
+}
+override_doctype_class = {
+    "ToDo": "enrollment.enrollment.doctype.enrollment.overrides.custom_to_do.CustomToDo"
+}
+doctype_js = {
+    "ToDo": "public/js/todo.js"
+}
+
+
 # Apps
 # ------------------
 

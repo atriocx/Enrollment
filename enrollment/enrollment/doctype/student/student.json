@@ -9,7 +9,9 @@
   "first_name",
   "last_name",
   "date_of_birth",
-  "grade"
+  "grade",
+  "attendance_count",
+  "user"
  ],
  "fields": [
   {
@@ -32,12 +34,23 @@
    "fieldname": "grade",
    "fieldtype": "Int",
    "label": "Grade"
+  },
+  {
+   "fieldname": "attendance_count",
+   "fieldtype": "Int",
+   "label": "Attendance Count"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-05 12:31:05.229857",
+ "modified": "2026-06-09 11:29:38.223806",
  "modified_by": "Administrator",
  "module": "Enrollment",
  "name": "Student",
@@ -55,6 +68,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Student",
+   "share": 1
   }
  ],
  "row_format": "Dynamic",

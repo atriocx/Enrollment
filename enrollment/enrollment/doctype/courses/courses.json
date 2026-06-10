@@ -10,7 +10,7 @@
   "credits",
   "department",
   "course_fee",
-  "seats_available"
+  "available_seats"
  ],
  "fields": [
   {
@@ -36,7 +36,7 @@
    "label": "Course Fee"
   },
   {
-   "fieldname": "seats_available",
+   "fieldname": "available_seats",
    "fieldtype": "Int",
    "label": "Seats Available"
   }
@@ -44,7 +44,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-06-05 17:07:05.142332",
+ "modified": "2026-06-10 09:35:42.461501",
  "modified_by": "Administrator",
  "module": "Enrollment",
  "name": "Courses",
